@@ -65,8 +65,10 @@ def create_app(config_name='default'):
     # Register blueprints
     from .routes.auth_routes import auth_bp
     from .routes.task_routes import task_bp
+    from .routes.health_routes import health_bp
     
     app.register_blueprint(auth_bp, url_prefix='/api/v1/auth')
     app.register_blueprint(task_bp, url_prefix='/api/v1')
+    app.register_blueprint(health_bp, url_prefix='/api')
 
     return app

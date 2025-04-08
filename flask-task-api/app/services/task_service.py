@@ -69,11 +69,18 @@ class TaskService:
         Returns:
             Task: The newly created Task object
         """
+        from datetime import datetime
+        
+        # Convert due_date string to datetime object if it exists
+        due_date = data.get('due_date')
+        if due_date:
+            due_date = datetime.fromisoformat(due_date.replace('Z', '+00:00'))
+        
         task = Task(
             title=data['title'],
             description=data.get('description'),
             status=data.get('status', 'pending'),
-            due_date=data.get('due_date'),
+            due_date=due_date,
             priority=data.get('priority', 1),
             user_id=user.id
         )

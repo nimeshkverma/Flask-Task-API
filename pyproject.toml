@@ -1,0 +1,26 @@
+[project]
+name = "flask-task-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "bcrypt==4.0.1",
+    "black==23.11.0",
+    "flake8==6.1.0",
+    "flasgger==0.9.7.1",
+    "flask==2.3.3",
+    "flask-caching==2.1.0",
+    "flask-cors==4.0.0",
+    "flask-jwt-extended==4.6.0",
+    "flask-limiter==3.5.0",
+    "flask-migrate==4.0.5",
+    "flask-sqlalchemy==2.5.1",
+    "gunicorn==21.2.0",
+    "marshmallow==3.20.1",
+    "pytest==7.4.3",
+    "python-dotenv==1.0.0",
+    "python-json-logger==2.0.7",
+    "redis==5.0.1",
+    "sqlalchemy==1.4.49",
+]
