@@ -42,37 +42,37 @@ flask-task-api/
 ## Setup Instructions
 
 1. Clone the repository:
-   ```bash
+```bash
 git clone <repository-url>
 cd flask-task-api
 ```
 
 2. Create and activate a virtual environment:
-   ```bash
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. Install dependencies:
-   ```bash
+```bash
 pip install -r requirements.txt
 ```
 
 4. Create .env file:
-   ```bash
+```bash
 cp .env.example .env
 ```
    Edit the .env file with your configuration values.
 
 5. Initialize the database:
-   ```bash
+```bash
 flask db init
 flask db migrate
 flask db upgrade
 ```
 
 6. Run the application:
-   ```bash
+```bash
 python app.py
 ```
 
@@ -207,3 +207,4 @@ Common HTTP status codes:
 @limiter.limit("200/day")
 def your_route():
     pass
+
